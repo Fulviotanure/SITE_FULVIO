@@ -378,8 +378,9 @@
 
 
 .tag-badge {
-    background-color: rgba(220, 38, 38, 0.06);
-    padding: 0.45rem 1.1rem;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-in-sm);
+    padding: 0.55rem 1.3rem;
     border-radius: 50px;
     font-size: 0.72rem;
     font-weight: 800;
@@ -387,8 +388,9 @@
     color: #dc2626;
     margin-bottom: 1.5rem;
     display: inline-block;
-    border: 1px solid rgba(220, 38, 38, 0.4);
+    border: none;
     text-transform: uppercase;
+    transition: all var(--transition-normal);
 }
 
 .hero-title {
