@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIVI | Plataforma de Streaming de Música</title>
+    <link rel="icon" type="image/png" href="capas/logo-rivi-icon.png">
+    <meta name="description"
+        content="RIVI - A nova experiência em streaming musical. Descubra artistas, ouça com osciloscópio dinâmico e acompanhe letras sincronizadas.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom RIVI Dark Neumorphic Yellow Theme Styles -->
+    <link rel="stylesheet" href="style.css?v=8.0">
+</head>
+
+<body class="dark-theme">
+    <!-- Ambient Yellow / Obsidian Glow Lights -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <!-- MAIN APP WRAPPER -->
+    <div class="app-layout">
+
+        <!-- TOP BAR (RIVI LOGO, SEARCH BAR, USER PROFILE) -->
+        <header class="app-top-bar">
+            <!-- Left: Official RIVI Logo -->
+            <div class="top-bar-left">
+                <a href="#home" class="brand-logo-link" id="brand-home-link" title="RIVI Início">
+                    <img src="capas/logo-rivi.png" alt="RIVI Logo" class="brand-logo-img">
+                </a>
+            </div>
+
+            <!-- Center: Interactive Search Input -->
+            <div class="top-bar-center">
+                <div class="search-box-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="search-input" id="global-search-input" placeholder="O que você quer ouvir hoje? (Músicas, artistas...)">
+                    <button class="search-clear-btn" id="search-clear-btn" aria-label="Limpar busca" style="display:none;">&times;</button>
+                </div>
+            </div>
+
+            <!-- Right: Em Construção Badge -->
+            <div class="top-bar-right">
+                <button class="badge-construction" id="user-profile-btn" aria-label="Área de Usuário em Construção" title="Área de Usuário em Construção">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    <span>Em Construção</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- APP BODY (SIDEBAR + MAIN CONTENT) -->
+        <div class="app-body">
+
+            <!-- LEFT SIDEBAR -->
+            <aside class="app-sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section-title">Menu Principal</div>
+                    <a href="#home" class="sidebar-link active" id="nav-home">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        <span>Início</span>
+                    </a>
+                    <a href="#artists" class="sidebar-link" id="nav-artists">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>Artistas</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-divider"></div>
+
+                <!-- ARTISTS QUICK LIST -->
+                <div class="sidebar-artists-list">
+                    <div class="nav-section-title">Artistas em Alta</div>
+                    <div class="artist-quick-item active-artist" data-artist="synapse">
+                        <img src="capas/artist-synapse.jpg" alt="Synapse" class="sidebar-artist-thumb">
+                        <div class="sidebar-artist-info">
+                            <span class="sidebar-artist-name">Synapse</span>
+                            <span class="sidebar-artist-genre">Synthwave</span>
+                        </div>
+                    </div>
+                    <div class="artist-quick-item" data-artist="nova-pulse">
+                        <img src="capas/artist-nova-pulse.jpg" alt="Nova Pulse" class="sidebar-artist-thumb">
+                        <div class="sidebar-artist-info">
+                            <span class="sidebar-artist-name">Nova Pulse</span>
+                            <span class="sidebar-artist-genre">Retrowave</span>
+                        </div>
+                    </div>
+                    <div class="artist-quick-item" data-artist="cyber-ghost">
+                        <img src="capas/artist-cyber-ghost.jpg" alt="Cyber Ghost" class="sidebar-artist-thumb">
+                        <div class="sidebar-artist-info">
+                            <span class="sidebar-artist-name">Cyber Ghost</span>
+                            <span class="sidebar-artist-genre">Darksynth</span>
+                        </div>
+                    </div>
+                    <div class="artist-quick-item" data-artist="luna-veil">
+                        <img src="capas/artist-luna-veil.jpg" alt="Luna Veil" class="sidebar-artist-thumb">
+                        <div class="sidebar-artist-info">
+                            <span class="sidebar-artist-name">Luna Veil</span>
+                            <span class="sidebar-artist-genre">Ambient</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT AREA -->
+            <main class="app-main-content" id="main-content">
+
+                <!-- VIEW 1: HOME & SPOTLIGHT PLAYER VIEW -->
+                <div class="app-view active-view" id="view-home">
+                    
+                    <!-- NEUMORPHIC MUSIC PLAYER CARD -->
+                    <section class="player-container" id="player-container" aria-label="Tocador de Música RIVI">
+                        <div class="player-card" id="player-card">
+
+                            <!-- Top Card Controls: Minimize Button -->
+                            <div class="player-card-top-actions">
+                                <button class="btn-minimize-player" id="player-minimize-btn" title="Minimizar tocador para a barra inferior" aria-label="Minimizar tocador">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Main Display Viewport -->
+                            <div class="player-viewport">
+
+                                <!-- MODE 1: ALBUM COVER ART PANEL (CLEAN NO CD) -->
+                                <div class="view-panel active" id="view-cover">
+                                    <div class="cover-art-wrapper">
+                                        <div class="album-frame" id="album-cover-frame" title="Clique para Reproduzir / Pausar">
+                                            <div class="album-glow"></div>
+                                            <img src="capas/cover-foolish-heart.jpg" alt="Capa da música" class="album-cover-img" id="main-cover-img">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- MODE 2: ULTRA-FINE MULTI-STRAND REACTIVE WAVE OSCILLOSCOPE -->
+                                <div class="view-panel" id="view-visualizer">
+                                    <div class="visualizer-container">
+                                        <canvas id="visualizer-canvas" class="visualizer-canvas"></canvas>
+                                    </div>
+                                </div>
+
+                                <!-- MODE 3: SYNCHRONIZED KARAOKE LYRICS PANEL -->
+                                <div class="view-panel" id="view-lyrics">
+                                    <div class="lyrics-container" id="lyrics-container">
+                                        <!-- Parsed dynamically from .lrc -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- CLEAN MINIMALIST TRACK INFO HEADER -->
+                            <div class="track-header">
+                                <h2 class="track-title" id="track-title">Foolish Heart</h2>
+                                <button class="track-artist-link" id="track-artist-link">Synapse</button>
+                            </div>
+
+                            <!-- TIMELINE & SEEK BAR -->
+                            <div class="timeline-box">
+                                <div class="timeline-slider-wrap" id="timeline-wrap" role="slider" aria-label="Progresso da música" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="timeline-progress" id="timeline-progress">
+                                        <div class="timeline-thumb"></div>
+                                    </div>
+                                </div>
+                                <div class="timeline-time">
+                                    <span id="current-time">00:00</span>
+                                    <span id="total-time">03:15</span>
+                                </div>
+                            </div>
+
+                            <!-- PLAYER CONTROLS & BOTTOM BAR -->
+                            <div class="player-bottom-bar">
+                                <!-- Left: Secondary Toggles -->
+                                <div class="controls-left">
+                                    <button class="btn-ctrl btn-ctrl-secondary" id="shuffle-btn" aria-label="Modo Aleatório" title="Aleatório">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="16 3 21 3 21 8" />
+                                            <line x1="4" y1="20" x2="21" y2="3" />
+                                            <polyline points="21 16 21 21 16 21" />
+                                            <line x1="15" y1="15" x2="21" y2="21" />
+                                            <line x1="4" y1="4" x2="9" y2="9" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn-ctrl btn-ctrl-secondary" id="repeat-btn" aria-label="Repetir Música" title="Repetir">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="17 1 21 5 17 9" />
+                                            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                            <polyline points="7 23 3 19 7 15" />
+                                            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <!-- Center: Playback Controls (Prev, Play/Pause, Next) -->
+                                <div class="controls-center">
+                                    <button class="btn-ctrl btn-ctrl-skip" id="prev-btn" aria-label="Música Anterior" title="Música Anterior">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="19 20 9 12 19 4 19 20" />
+                                            <line x1="5" y1="19" x2="5" y2="5" />
+                                        </svg>
+                                    </button>
+
+                                    <button class="btn-ctrl btn-ctrl-play" id="play-btn" aria-label="Reproduzir / Pausar" title="Reproduzir / Pausar">
+                                        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                        </svg>
+                                        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                                            <rect width="4" height="16" x="6" y="4" />
+                                            <rect width="4" height="16" x="14" y="4" />
+                                        </svg>
+                                    </button>
+
+                                    <button class="btn-ctrl btn-ctrl-skip" id="next-btn" aria-label="Próxima Música" title="Próxima Música">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="5 4 15 12 5 20 5 4" />
+                                            <line x1="19" y1="5" x2="19" y2="19" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <!-- Right: Mode & Vertical Volume -->
+                                <div class="controls-right">
+                                    
+                                    <!-- Mode Switcher Popover -->
+                                    <div class="popover-wrapper" id="mode-popover-wrap">
+                                        <button class="btn-icon-neu" id="mode-btn" aria-label="Alternar Modo de Exibição" title="Modo de Exibição">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                                                <polyline points="2 17 12 22 22 17" />
+                                                <polyline points="2 12 12 17 22 12" />
+                                            </svg>
+                                        </button>
+
+                                        <div class="popup-panel mode-menu-popup" id="mode-popup">
+                                            <div class="popup-title">Modo de Exibição</div>
+                                            <button class="mode-menu-item active" data-view="view-cover">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                                                    <circle cx="9" cy="9" r="2" />
+                                                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                                                </svg>
+                                                <span>Arte do Álbum</span>
+                                            </button>
+                                            <button class="mode-menu-item" data-view="view-visualizer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M2 12h20" />
+                                                    <path d="M6 12c1.5-6 3-6 4.5 0s3 6 4.5 0 3-6 4.5 0" />
+                                                </svg>
+                                                <span>Visualizador de Onda</span>
+                                            </button>
+                                            <button class="mode-menu-item" data-view="view-lyrics">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                                    <line x1="8" y1="9" x2="16" y2="9" />
+                                                    <line x1="8" y1="13" x2="14" y2="13" />
+                                                </svg>
+                                                <span>Letra Sincronizada</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Vertical Volume Popover -->
+                                    <div class="popover-wrapper" id="volume-popover-wrap">
+                                        <button class="btn-icon-neu" id="volume-btn" aria-label="Ajustar Volume" title="Volume">
+                                            <svg id="vol-icon-high" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                                                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                                            </svg>
+                                            <svg id="vol-icon-mute" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                                                <line x1="23" y1="9" x2="17" y2="15" />
+                                                <line x1="17" y1="9" x2="23" y2="15" />
+                                            </svg>
+                                        </button>
+
+                                        <div class="popup-panel volume-vertical-popup" id="volume-popup">
+                                            <span class="volume-val-badge" id="volume-val-text">85%</span>
+                                            <div class="volume-vertical-track" id="volume-vertical-track" role="slider" aria-label="Volume do tocador" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+                                                <div class="volume-vertical-fill" id="volume-vertical-fill">
+                                                    <div class="volume-vertical-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- RELATED / SAME ARTIST SONGS SECTION -->
+                    <section class="tracks-section" id="related-tracks-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Mais de <span id="current-artist-heading">Synapse</span></h2>
+                            <span class="section-subtitle">Faixas recomendadas e lançamentos</span>
+                        </div>
+                        <div class="spotify-tracklist" id="home-tracklist"></div>
+                    </section>
+
+                </div>
+
+                <!-- VIEW 2: ARTIST PROFILE PAGE -->
+                <div class="app-view" id="view-artist" style="display:none;">
+                    <section class="artist-hero-profile" id="artist-profile-header">
+                        <div class="artist-hero-photo-wrap">
+                            <img src="capas/artist-synapse.jpg" alt="Foto do artista" class="artist-hero-img" id="artist-hero-img">
+                        </div>
+                        <div class="artist-hero-details">
+                            <div class="artist-verified-tag">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span>Artista Verificado RIVI</span>
+                            </div>
+                            <h1 class="artist-hero-name" id="artist-hero-name">Synapse</h1>
+                            <p class="artist-hero-bio" id="artist-hero-bio">Synthwave • Dark Electronic • Ambient</p>
+                            
+                            <div class="artist-hero-actions">
+                                <button class="btn-play-random" id="artist-play-random-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="5 3 19 12 5 21 5 3" />
+                                    </svg>
+                                    <span>Tocar Aleatório</span>
+                                </button>
+                                <button class="btn-spotify-follow" id="artist-follow-btn">
+                                    <span>Seguir</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="tracks-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Discografia</h2>
+                            <span class="section-subtitle">Todas as músicas deste artista</span>
+                        </div>
+                        <div class="spotify-tracklist" id="artist-tracklist"></div>
+                    </section>
+                </div>
+
+                <!-- VIEW 3: ALL ARTISTS DIRECTORY -->
+                <div class="app-view" id="view-artists-list" style="display:none;">
+                    <section class="tracks-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Todos os Artistas RIVI</h2>
+                            <span class="section-subtitle">Navegue pelos criadores e estilos musicais</span>
+                        </div>
+                        <div class="artists-grid" id="artists-grid"></div>
+                    </section>
+                </div>
+
+                <!-- VIEW 4: SEARCH RESULTS -->
+                <div class="app-view" id="view-search-results" style="display:none;">
+                    <section class="tracks-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Resultados da Busca</h2>
+                            <span class="section-subtitle" id="search-query-text">Exibindo resultados para sua pesquisa</span>
+                        </div>
+                        <div class="spotify-tracklist" id="search-tracklist"></div>
+                    </section>
+                </div>
+
+            </main>
+
+        </div>
+
+        <!-- FIXED BOTTOM MINI-PLAYER BAR (WHEN MINIMIZED) -->
+        <footer class="bottom-mini-player" id="bottom-mini-player" style="display:none;">
+            <!-- Left: Cover Thumb + Track Title + Artist -->
+            <div class="mini-player-left" id="mini-player-expand-trigger" title="Clique para expandir o player">
+                <img src="capas/cover-foolish-heart.jpg" alt="Capa" class="mini-cover-thumb" id="mini-cover-img">
+                <div class="mini-track-info">
+                    <span class="mini-track-title" id="mini-track-title">Foolish Heart</span>
+                    <span class="mini-track-artist" id="mini-track-artist">Synapse</span>
+                </div>
+            </div>
+
+            <!-- Center: Controls & Interactive Timeline -->
+            <div class="mini-player-center">
+                <div class="mini-controls-btns">
+                    <button class="mini-btn-ctrl" id="mini-shuffle-btn" title="Modo Aleatório">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 3 21 3 21 8" />
+                            <line x1="4" y1="20" x2="21" y2="3" />
+                            <polyline points="21 16 21 21 16 21" />
+                            <line x1="15" y1="15" x2="21" y2="21" />
+                            <line x1="4" y1="4" x2="9" y2="9" />
+                        </svg>
+                    </button>
+                    <button class="mini-btn-ctrl" id="mini-prev-btn" title="Música Anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="19 20 9 12 19 4 19 20" />
+                            <line x1="5" y1="19" x2="5" y2="5" />
+                        </svg>
+                    </button>
+                    <button class="mini-btn-play" id="mini-play-btn" title="Reproduzir / Pausar">
+                        <svg id="mini-play-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                        <svg id="mini-pause-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+                            <rect width="4" height="16" x="6" y="4" />
+                            <rect width="4" height="16" x="14" y="4" />
+                        </svg>
+                    </button>
+                    <button class="mini-btn-ctrl" id="mini-next-btn" title="Próxima Música">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 4 15 12 5 20 5 4" />
+                            <line x1="19" y1="5" x2="19" y2="19" />
+                        </svg>
+                    </button>
+                    <button class="mini-btn-ctrl" id="mini-repeat-btn" title="Repetir Música">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="17 1 21 5 17 9" />
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                            <polyline points="7 23 3 19 7 15" />
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mini-timeline-bar" id="mini-timeline-bar" title="Progresso da música">
+                    <div class="mini-timeline-progress" id="mini-timeline-progress"></div>
+                </div>
+            </div>
+
+            <!-- Right: Dynamic Right Widget (Wave Visualizer OR Live Lyrics Ticker) + Maximize -->
+            <div class="mini-player-right">
+                <!-- Mode A: Wave Visualizer Container -->
+                <div class="mini-wave-wrapper" id="mini-wave-wrapper" title="Ondas sonoras em tempo real">
+                    <canvas id="mini-visualizer-canvas" class="mini-visualizer-canvas"></canvas>
+                </div>
+
+                <!-- Mode B: Live Lyrics Ticker (When Minimized from Lyrics Mode) -->
+                <div class="mini-lyrics-wrapper" id="mini-lyrics-wrapper" title="Letra ao vivo" style="display:none;">
+                    <svg class="mini-lyric-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" />
+                    </svg>
+                    <div class="mini-lyric-marquee" id="mini-lyrics-ticker">Aguardando letra...</div>
+                </div>
+
+                <button class="mini-btn-maximize" id="mini-maximize-btn" title="Maximizar para o Player Completo" aria-label="Maximizar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="18 15 12 9 6 15" />
+                    </svg>
+                </button>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- USER PROFILE MODAL DIALOG -->
+    <div class="modal-backdrop" id="user-modal" style="display:none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title">Área do Usuário</div>
+                <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-profile-summary">
+                    <div class="user-avatar-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <div class="user-details-text">
+                        <div class="user-display-name">Recursos em Construção</div>
+                        <div class="user-tier">Lançamento em Breve</div>
+                    </div>
+                </div>
+                <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                    Em breve você poderá criar sua conta no <strong>RIVI</strong>, salvar playlists personalizadas na nuvem, seguir seus artistas favoritos e sincronizar seu histórico entre dispositivos.
+                </div>
+                <div class="user-settings-list">
+                    <div class="setting-item">
+                        <span>Qualidade do Áudio</span>
+                        <span class="badge-tag">HD Lossless 320kbps</span>
+                    </div>
+                    <div class="setting-item">
+                        <span>Visualizador de Onda</span>
+                        <span class="badge-tag">RIVI Laser 60 FPS</span>
+                    </div>
+                    <div class="setting-item">
+                        <span>Sincronização de Letras</span>
+                        <span class="badge-tag">Karaokê .LRC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Native Hidden Audio Element -->
+    <audio id="audio-player" preload="auto" playsinline></audio>
+
+    <!-- Scripts -->
+    <script src="audio-data.js?v=1.0"></script>
+    <script src="player.js?v=8.0"></script>
+</body>
+
+</html>

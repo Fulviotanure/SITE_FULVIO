@@ -1,0 +1,126 @@
+{
+  "artists": [
+    {
+      "id": "synapse",
+      "name": "Synapse",
+      "genre": "Synthwave / Dark Electronic",
+      "avatar": "capas/artist-synapse.jpg",
+      "banner": "capas/artist-synapse.jpg",
+      "bio": "Produtor de música eletrônica focado em batidas analógicas, sintetizadores espaciais e atmosferas cyberpunk.",
+      "verified": true
+    },
+    {
+      "id": "nova-pulse",
+      "name": "Nova Pulse",
+      "genre": "Retrowave / 80s Synth",
+      "avatar": "capas/artist-nova-pulse.jpg",
+      "banner": "capas/artist-nova-pulse.jpg",
+      "bio": "Mergulho nostálgico no retrowave com sintetizadores analógicos clássicos e horizontes de neon.",
+      "verified": true
+    },
+    {
+      "id": "cyber-ghost",
+      "name": "Cyber Ghost",
+      "genre": "Darksynth / Industrial",
+      "avatar": "capas/artist-cyber-ghost.jpg",
+      "banner": "capas/artist-cyber-ghost.jpg",
+      "bio": "Linhas de baixo pesadas, distorções industriais e ritmos eletrônicos distópicos para alta adrenalina.",
+      "verified": true
+    },
+    {
+      "id": "luna-veil",
+      "name": "Luna Veil",
+      "genre": "Ambient / Chillwave",
+      "avatar": "capas/artist-luna-veil.jpg",
+      "banner": "capas/artist-luna-veil.jpg",
+      "bio": "Paisagens sonoras imersivas, frequências relaxantes e sintetizadores celestiais para concentração e relaxamento.",
+      "verified": true
+    }
+  ],
+  "tracks": [
+    {
+      "id": "foolish-heart",
+      "title": "Foolish Heart",
+      "artistId": "synapse",
+      "artist": "Synapse",
+      "album": "Single Oficial",
+      "genre": "Synthwave / Dark Electronic",
+      "src": "audios/foolish-heart.mp3",
+      "cover": "capas/cover-foolish-heart.jpg",
+      "lrc": "letras/foolish-heart.lrc",
+      "duration": 195
+    },
+    {
+      "id": "youre-not-mine",
+      "title": "You're Not Mine",
+      "artistId": "synapse",
+      "artist": "Synapse",
+      "album": "Single Oficial",
+      "genre": "Dark Pop / Synthwave",
+      "src": "audios/youre-not-mine.mp3",
+      "cover": "capas/cover-youre-not-mine.jpg",
+      "lrc": "letras/youre-not-mine.lrc",
+      "duration": 176
+    },
+    {
+      "id": "cyber-pulse",
+      "title": "Cyber Pulse",
+      "artistId": "synapse",
+      "artist": "Synapse",
+      "album": "Single Oficial",
+      "genre": "Darksynth / Midtempo",
+      "src": "audios/foolish-heart.mp3",
+      "cover": "capas/cover-foolish-heart.jpg",
+      "lrc": "letras/foolish-heart.lrc",
+      "duration": 184
+    },
+    {
+      "id": "neon-sunset",
+      "title": "Neon Sunset",
+      "artistId": "nova-pulse",
+      "artist": "Nova Pulse",
+      "album": "Retro Horizons",
+      "genre": "Retrowave / 80s Synth",
+      "src": "audios/youre-not-mine.mp3",
+      "cover": "capas/artist-nova-pulse.jpg",
+      "lrc": "letras/youre-not-mine.lrc",
+      "duration": 222
+    },
+    {
+      "id": "midnight-drive",
+      "title": "Midnight Drive",
+      "artistId": "nova-pulse",
+      "artist": "Nova Pulse",
+      "album": "Retro Horizons",
+      "genre": "Retrowave / 80s Synth",
+      "src": "audios/foolish-heart.mp3",
+      "cover": "capas/artist-nova-pulse.jpg",
+      "lrc": "letras/foolish-heart.lrc",
+      "duration": 255
+    },
+    {
+      "id": "system-overload",
+      "title": "System Overload",
+      "artistId": "cyber-ghost",
+      "artist": "Cyber Ghost",
+      "album": "Dark Circuit",
+      "genre": "Darksynth / Industrial",
+      "src": "audios/foolish-heart.mp3",
+      "cover": "capas/artist-cyber-ghost.jpg",
+      "lrc": "letras/foolish-heart.lrc",
+      "duration": 208
+    },
+    {
+      "id": "astral-drift",
+      "title": "Astral Drift",
+      "artistId": "luna-veil",
+      "artist": "Luna Veil",
+      "album": "Ethereal Echoes",
+      "genre": "Ambient / Chillwave",
+      "src": "audios/youre-not-mine.mp3",
+      "cover": "capas/artist-luna-veil.jpg",
+      "lrc": "letras/youre-not-mine.lrc",
+      "duration": 242
+    }
+  ]
+}
