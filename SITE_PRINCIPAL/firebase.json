@@ -17,7 +17,71 @@
       "*.bat",
       "PAGINAS/SITE_FOTO/_ORIGINAIS/**"
     ],
+    "redirects": [
+      {
+        "source": "/PAGINAS/SITE_FOTO",
+        "destination": "/fotografia",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_FOTO/index.html",
+        "destination": "/fotografia",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_WMACRO",
+        "destination": "/wmacro",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_WMACRO/index.html",
+        "destination": "/wmacro",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_RIVI",
+        "destination": "/rivi",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_RIVI/index.html",
+        "destination": "/rivi",
+        "type": 301
+      }
+    ],
     "rewrites": [
+      {
+        "source": "/fotografia",
+        "destination": "/PAGINAS/SITE_FOTO/index.html"
+      },
+      {
+        "source": "/fotografia/**",
+        "destination": "/PAGINAS/SITE_FOTO/index.html"
+      },
+      {
+        "source": "/foto",
+        "destination": "/PAGINAS/SITE_FOTO/index.html"
+      },
+      {
+        "source": "/foto/**",
+        "destination": "/PAGINAS/SITE_FOTO/index.html"
+      },
+      {
+        "source": "/wmacro",
+        "destination": "/PAGINAS/SITE_WMACRO/index.html"
+      },
+      {
+        "source": "/wmacro/**",
+        "destination": "/PAGINAS/SITE_WMACRO/index.html"
+      },
+      {
+        "source": "/rivi",
+        "destination": "/PAGINAS/SITE_RIVI/index.html"
+      },
+      {
+        "source": "/rivi/**",
+        "destination": "/PAGINAS/SITE_RIVI/index.html"
+      },
       {
         "source": "/PAGINAS/SITE_FOTO",
         "destination": "/PAGINAS/SITE_FOTO/index.html"
@@ -33,6 +97,14 @@
       {
         "source": "/PAGINAS/SITE_WMACRO/**",
         "destination": "/PAGINAS/SITE_WMACRO/index.html"
+      },
+      {
+        "source": "/PAGINAS/SITE_RIVI",
+        "destination": "/PAGINAS/SITE_RIVI/index.html"
+      },
+      {
+        "source": "/PAGINAS/SITE_RIVI/**",
+        "destination": "/PAGINAS/SITE_RIVI/index.html"
       }
     ],
     "headers": [
