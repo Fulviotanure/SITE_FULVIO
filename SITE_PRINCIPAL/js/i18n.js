@@ -63,6 +63,8 @@
                 modal_title: "Criação de Sites",
                 wmacro: "WMacro",
                 fotografias: "Fotografias",
+                deerprint: "DeerPrint",
+                rivi: "RIVI (Streaming de Música)",
                 sobmedida: "Solicitar Sob Medida"
             },
             portfolio: {
@@ -192,6 +194,8 @@
                 modal_title: "Website Creation",
                 wmacro: "WMacro",
                 fotografias: "Photographs",
+                deerprint: "DeerPrint",
+                rivi: "RIVI (Music Streaming)",
                 sobmedida: "Request Custom Site"
             },
             portfolio: {
@@ -321,6 +325,8 @@
                 modal_title: "Creazione di Siti Web",
                 wmacro: "WMacro",
                 fotografias: "Fotografie",
+                deerprint: "DeerPrint",
+                rivi: "RIVI (Streaming Musicale)",
                 sobmedida: "Richiedi Su Misura"
             },
             portfolio: {

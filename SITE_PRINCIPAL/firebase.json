@@ -47,6 +47,16 @@
         "source": "/PAGINAS/SITE_RIVI/index.html",
         "destination": "/rivi",
         "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_DEERPRINT",
+        "destination": "/deerprint",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_DEERPRINT/index.html",
+        "destination": "/deerprint",
+        "type": 301
       }
     ],
     "rewrites": [
@@ -83,6 +93,30 @@
         "destination": "/PAGINAS/SITE_RIVI/index.html"
       },
       {
+        "source": "/deerprint",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
+        "source": "/deerprint/**",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
+        "source": "/deer-print",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
+        "source": "/deer-print/**",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
+        "source": "/deer",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
+        "source": "/deer/**",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
         "source": "/PAGINAS/SITE_FOTO",
         "destination": "/PAGINAS/SITE_FOTO/index.html"
       },
@@ -105,6 +139,14 @@
       {
         "source": "/PAGINAS/SITE_RIVI/**",
         "destination": "/PAGINAS/SITE_RIVI/index.html"
+      },
+      {
+        "source": "/PAGINAS/SITE_DEERPRINT",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
+        "source": "/PAGINAS/SITE_DEERPRINT/**",
+        "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
       }
     ],
     "headers": [

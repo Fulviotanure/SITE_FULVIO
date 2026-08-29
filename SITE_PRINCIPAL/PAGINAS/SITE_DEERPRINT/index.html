@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script>
+    if (window.location.protocol !== 'file:' && window.location.pathname.startsWith('/deerprint')) {
+      document.write('<base href="/PAGINAS/SITE_DEERPRINT/">');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeerPrint - PRINT AND EDIT | Screenshot e Editor de Produtividade</title>
+  
+  <!-- Canonical & Favicon -->
+  <link rel="canonical" href="https://fulviotanure.com.br/deerprint">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="DeerPrint - Editor de print focado em produtividade 100% gratuito. Tire print e edite com as principais ferramentas em um piscar de olhos no Windows.">
+  <meta name="keywords" content="DeerPrint, Captura de Tela, Screenshot Windows, Print Screen, Editor de Print, Anotação de Imagens, F10, Produtividade, Software Gratuito">
+  <meta name="author" content="Fulvio Tanure">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fulviotanure.com.br/deerprint">
+  <meta property="og:title" content="DeerPrint - Editor de Print Focado em Produtividade">
+  <meta property="og:description" content="O DeerPrint é um editor de print focado em produtividade 100% gratuito. Tire print e edite com as principais ferramentas em um piscar de olhos.">
+  <meta property="og:image" content="https://fulviotanure.com.br/PAGINAS/SITE_DEERPRINT/deerprint-logo.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DeerPrint - Editor de Print Gratuito para Windows">
+  <meta name="twitter:description" content="O DeerPrint é um editor de print focado em produtividade 100% gratuito. Tire print e edite com as principais ferramentas em um piscar de olhos.">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DeerPrint",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "description": "Editor de print focado em produtividade 100% gratuito para Windows.",
+    "author": {
+      "@type": "Person",
+      "name": "Fulvio Tanure",
+      "url": "https://fulviotanure.com.br"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Manrope, Work Sans, Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-center"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- ==========================================================================
+       NAVBAR
+       ========================================================================== -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="/deerprint" class="brand-link">
+        <div class="brand-logo-wrapper">
+          <img src="deerprint-icon.png" alt="DeerPrint Logo" class="brand-logo-img">
+        </div>
+        <span class="brand-name">
+          DeerPrint
+        </span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="#demonstracao" class="nav-link">Ferramentas</a></li>
+        <li><a href="#instrucoes" class="nav-link">Guia</a></li>
+        <li><a href="#atalhos" class="nav-link">Atalhos</a></li>
+        <li><a href="#download" class="nav-link">Download</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a id="btn-download-nav" href="#download" class="btn-nav-download">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Baixar Grátis</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <header class="hero">
+    <div class="container">
+      
+      <!-- Top Badge -->
+      <div class="hero-badge-container">
+        <a href="#download" class="tag-badge" id="hero-version-tag">
+          <span class="badge-pulse-dot"></span>
+          <span>🦌 Disponível para Windows 10 & 11</span>
+        </a>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-title">
+        <span class="text-gradient">PRINT AND EDIT</span><br>
+        <span style="font-size: clamp(24px, 3.8vw, 38px); font-weight: 700; color: var(--text-main); display: block; margin-top: 6px;">Screenshot e editor focado em produtividade</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-description">
+        O <strong>DeerPrint</strong> é um editor de print focado em produtividade 100% gratuito, tire print e edite com as principais ferramentas em um piscar de olhos.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-actions">
+        <div class="hero-cta-group">
+          <a id="btn-download-hero" href="#download" class="btn-cta-primary">
+            <span class="btn-icon-win">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+            </span>
+            <span class="btn-label">Baixar DeerPrint Grátis</span>
+          </a>
+          <a href="#demonstracao" class="btn-cta-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+            <span>Ver Ferramentas</span>
+          </a>
+        </div>
+        <div class="hero-meta" id="hero-download-meta">
+          <span class="meta-item">Windows 10 / 11 (64-bit)</span>
+          <span class="meta-dot"></span>
+          <span class="meta-item">Instalador Oficial Seguro</span>
+          <span class="meta-dot"></span>
+          <span class="meta-item">100% Gratuito</span>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           HIGH-FIDELITY APP SHOWCASE MOCKUP (REAL SCREENSHOTS VIEWER)
+           ====================================================================== -->
+      <div class="showcase-wrapper">
+        <div class="mockup-window">
+          
+          <!-- Mockup Titlebar -->
+          <div class="mockup-titlebar">
+            <div class="titlebar-controls">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="titlebar-title" id="mockup-screen-title">
+              <img src="deerprint-icon.png" alt="DeerPrint" width="16" height="16" style="border-radius: 3px; vertical-align: middle;">
+              DeerPrint — Editor de Capturas & Precisão
+            </div>
+            <div class="titlebar-actions">
+              <span>Taxa: 144Hz</span>
+              <span>4K HDR Ready</span>
+            </div>
+          </div>
+
+          <!-- Real Screenshot Viewer Canvas -->
+          <div class="mockup-real-screen-wrap">
+            <img id="mockup-main-screenshot" class="mockup-real-img" src="screenshot-arrows.png" alt="DeerPrint Editor de Capturas & Precisão">
+            
+            <!-- Interactive Screenshot Switcher Navigation -->
+            <div class="mockup-screen-nav">
+              <button class="mockup-nav-btn active" data-img="screenshot-arrows.png" data-title="Anotações & Setas de Precisão">
+                🎯 Anotações & Setas
+              </button>
+              <button class="mockup-nav-btn" data-img="screenshot-blur.png" data-title="Desfoque do Vidro Fosco">
+                💧 Desfoque de Vidro
+              </button>
+              <button class="mockup-nav-btn" data-img="screenshot-tags.png" data-title="Tags & Palavras Rápidas">
+                🏷️ Tags Arrastáveis
+              </button>
+              <button class="mockup-nav-btn" data-img="screenshot-palette.png" data-title="Seletor de Cores & Texto">
+                🎨 Cores & Texto
+              </button>
+              <button class="mockup-nav-btn" data-img="screenshot-home.png" data-title="Tela Inicial & Disparo F10">
+                ⚡ Tela Inicial (F10)
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       GRADE DE RECURSOS (FEATURES)
+       ========================================================================== -->
+  <section class="section" id="recursos">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge">Poder & Simplicidade</span>
+        <h2 class="section-title">Construído para profissionais exigentes</h2>
+        <p class="section-subtitle">
+          Cada detalhe do DeerPrint foi planejado para eliminar atritos, garantindo velocidade máxima e total fidelidade visual.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        
+        <!-- Feature 1: Edição sem Complicação -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          </div>
+          <h3 class="feature-title">Edição sem Complicação</h3>
+          <p class="feature-text">
+            Puxe setas, faça marcações, destaques e escreva textos diretamente no print.
+          </p>
+          <span class="feature-tag">Edição intuitiva</span>
+        </div>
+
+        <!-- Feature 2: Oculte Dados Sensíveis -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+          </div>
+          <h3 class="feature-title">Oculte Dados Sensíveis</h3>
+          <p class="feature-text">
+            Com a ferramenta Vidro você pode desfocar e ocultar dados sensíveis, textos, senhas, endereços, etc.
+          </p>
+          <span class="feature-tag">Privacidade instantânea</span>
+        </div>
+
+        <!-- Feature 3: Tags Arrastáveis -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          </div>
+          <h3 class="feature-title">Palavras & Tags Rápidas</h3>
+          <p class="feature-text">
+            Adicione qualquer palavra, frase ou termo muito usado e arraste diretamente para a imagem como badges coloridos e editáveis.
+          </p>
+          <span class="feature-tag">Tags Personalizáveis</span>
+        </div>
+
+        <!-- Feature 4: Paleta de Cores & Elementos -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a10 10 0 0 1-10-10c0-5.523 4.477-10 10-10z"></path></svg>
+          </div>
+          <h3 class="feature-title">Paleta de Cores & Objetos</h3>
+          <p class="feature-text">
+            Altere facilmente a cor de textos e de todos os elementos e objetos inseridos no print — como retângulos preenchidos, setas e palavras/tags arrastáveis.
+          </p>
+          <span class="feature-tag">Cores para todos os objetos</span>
+        </div>
+
+        <!-- Feature 5: Histórico Integrado -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          </div>
+          <h3 class="feature-title">Histórico com Miniaturas</h3>
+          <p class="feature-text">
+            Acesse suas capturas recentes direto no painel lateral direito, com resolução em pixels, data/hora e tamanho em KB.
+          </p>
+          <span class="feature-tag">Sidebar de Capturas</span>
+        </div>
+
+        <!-- Feature 6: Copiar e Colar -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+          <h3 class="feature-title">Copiar e Colar</h3>
+          <p class="feature-text">
+            Ao tirar um print ele já estará na sua área de transferência. Você já pode colar diretamente em um programa ou editar antes, e salvar o print com nome personalizado.
+          </p>
+          <span class="feature-tag">Área de transferência</span>
+        </div>
+
+        <!-- Feature 7: 100% Local & Privado -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 class="feature-title">100% Local & Privado</h3>
+          <p class="feature-text">
+            Nenhuma imagem sai do seu computador. Zero envio para nuvens terceiras, sem telemetria e sem necessidade de login.
+          </p>
+          <span class="feature-tag">Zero Telemetria</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE TOOLS SHOWCASE (WITH REAL SCREENSHOTS)
+       ========================================================================== -->
+  <section class="section" id="demonstracao" style="background: rgba(18, 20, 18, 0.6);">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge">Caixa de Ferramentas</span>
+        <h2 class="section-title">Anotações técnicas em ação real</h2>
+        <p class="section-subtitle">
+          Veja como cada recurso funciona dentro da interface real do DeerPrint.
+        </p>
+      </div>
+
+      <div class="tools-showcase-container">
+        
+        <!-- Tab Buttons -->
+        <div class="tools-tabs">
+          <button class="tool-tab-btn active" data-tool="seta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span>Setas & Caixas</span>
+          </button>
+          <button class="tool-tab-btn" data-tool="desfoque">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            <span>Desfoque de Vidro</span>
+          </button>
+          <button class="tool-tab-btn" data-tool="tags">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path></svg>
+            <span>Tags Arrastáveis</span>
+          </button>
+          <button class="tool-tab-btn" data-tool="cores">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+            <span>Paleta & Texto</span>
+          </button>
+          <button class="tool-tab-btn" data-tool="home">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span>Tela & Histórico</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Seta & Retângulo -->
+        <div class="tool-tab-pane active" id="pane-seta">
+          <div class="tool-pane-info">
+            <h3>Setas Direcionais & Caixas de Destaque</h3>
+            <p>
+              Conecte pontos de interesse com setas precisas e enquadre textos ou botões com retângulos de borda calibrada. O desenho não interfere nos elementos existentes na tela.
+            </p>
+            <ul class="tool-highlights-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Traçado contínuo e setas direcionais de alta visibilidade</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Caixas retangulares ajustáveis com snap magnético</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Combinação perfeita com desfoque e textos</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tool-pane-visual-real">
+            <span class="tool-pane-badge">Captura Real do App</span>
+            <img src="screenshot-arrows.png" alt="Setas e Caixas de Precisão no DeerPrint" class="tool-pane-screenshot-img">
+          </div>
+        </div>
+
+        <!-- Tab 2: Desfoque do Vidro -->
+        <div class="tool-tab-pane" id="pane-desfoque">
+          <div class="tool-pane-info">
+            <h3>Desfoque do Vidro (Frosted Glass Blur)</h3>
+            <p>
+              Oculte parágrafos inteiros, senhas ou dados confidenciais com desfoque gaussiano de vidro fosco. Escolha entre os níveis <strong>Leve</strong>, <strong>Suave</strong>, <strong>Médio</strong> ou <strong>Forte</strong>.
+            </p>
+            <ul class="tool-highlights-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Menu flutuante de intensidade (Leve, Suave, Médio, Forte)</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Aparência elegante e profissional de vidro fosco</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Processamento destrutivo na exportação (impossível reverter dados)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tool-pane-visual-real">
+            <span class="tool-pane-badge">Menu de Desfoque</span>
+            <img src="screenshot-blur.png" alt="Desfoque do Vidro no DeerPrint" class="tool-pane-screenshot-img">
+          </div>
+        </div>
+
+        <!-- Tab 3: Tags Arrastáveis -->
+        <div class="tool-tab-pane" id="pane-tags">
+          <div class="tool-pane-info">
+            <h3>Palavras Rápidas & Tags Arrastáveis</h3>
+            <p>
+              Ganhe tempo adicionando qualquer palavra ou termo frequentemente utilizado na sua rotina e arraste diretamente para a imagem como tags visuais destacadas.
+            </p>
+            <ul class="tool-highlights-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Adicione qualquer palavra, frase ou código personalizado na barra lateral</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Arraste suave (Drag & Drop) direto para qualquer posição do print</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Edição de texto e cor com dois cliques</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tool-pane-visual-real">
+            <span class="tool-pane-badge">Painel de Tags</span>
+            <img src="screenshot-tags.png" alt="Tags Arrastáveis no DeerPrint" class="tool-pane-screenshot-img">
+          </div>
+        </div>
+
+        <!-- Tab 4: Cores & Elementos -->
+        <div class="tool-tab-pane" id="pane-cores">
+          <div class="tool-pane-info">
+            <h3>Paleta de Cores & Elementos Inseridos</h3>
+            <p>
+              Use a paleta de cores para mudar a tonalidade de textos e de todos os objetos adicionados na imagem — como retângulos preenchidos, setas de precisão e palavras/tags arrastáveis.
+            </p>
+            <ul class="tool-highlights-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mude a cor de textos e caixas de anotação com facilidade</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Ajuste de cor para retângulos preenchidos, setas e formas</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Personalize o tom das palavras e tags arrastáveis</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tool-pane-visual-real">
+            <span class="tool-pane-badge">Paleta de Cores</span>
+            <img src="screenshot-palette.png" alt="Seletor de Cores no DeerPrint" class="tool-pane-screenshot-img">
+          </div>
+        </div>
+
+        <!-- Tab 5: Tela Inicial & Histórico -->
+        <div class="tool-tab-pane" id="pane-home">
+          <div class="tool-pane-info">
+            <h3>Tela Inicial & Histórico Lateral</h3>
+            <p>
+              Interface moderna e minimalista com indicação do atalho global <kbd>F10</kbd>, botão de disparo imediato e painel lateral com histórico completo de capturas e miniaturas.
+            </p>
+            <ul class="tool-highlights-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Acesso instantâneo a capturas anteriores no histórico</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Botões rápidos de 'Salvar Como', 'Copiar' e configurações</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Barra de status com resolução em pixels e tamanho do arquivo</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tool-pane-visual-real">
+            <span class="tool-pane-badge">Tela Principal</span>
+            <img src="screenshot-home.png" alt="Tela Inicial do DeerPrint" class="tool-pane-screenshot-img">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INSTRUÇÕES DE USO & GUIA OFICIAL
+       ========================================================================== -->
+  <section class="section" id="instrucoes">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge">Guia Rápido</span>
+        <h2 class="section-title">Instruções de Uso & Produtividade</h2>
+        <p class="section-subtitle">
+          Aprenda o fluxo de trabalho ideal do DeerPrint em poucos minutos.
+        </p>
+      </div>
+
+      <div class="guide-grid">
+        
+        <!-- Card 1: Como Capturar -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <div class="guide-card-icon">📸</div>
+            <h3 class="guide-card-title">Como Capturar a Tela</h3>
+          </div>
+          <div class="guide-card-body">
+            <p>
+              Pressione a tecla de atalho configurada (<kbd>F10</kbd>) em qualquer lugar do Windows.
+            </p>
+            <p>
+              Arraste o cursor sobre a área desejada. O print será aberto no DeerPrint e copiado imediatamente para a área de transferência (<kbd>Ctrl + V</kbd>).
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Palavras, Tags & Texto -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <div class="guide-card-icon">🏷️</div>
+            <h3 class="guide-card-title">Palavras, Tags & Texto Livre</h3>
+          </div>
+          <div class="guide-card-body">
+            <p>
+              Arraste palavras da barra lateral esquerda diretamente para a imagem, ou use a ferramenta <strong>Texto (<kbd>T</kbd>)</strong> clicando exatamente onde deseja escrever.
+            </p>
+            <p>
+              Dê <strong>dois cliques</strong> em qualquer texto para editar, ou clique e arraste para movê-lo. Ao clicar fora, o texto é salvo automaticamente.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Desenhar Setas e Formas -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <div class="guide-card-icon">🏹</div>
+            <h3 class="guide-card-title">Desenhar Setas e Formas</h3>
+          </div>
+          <div class="guide-card-body">
+            <p>
+              Selecione <strong>Retângulo (<kbd>R</kbd>)</strong>, <strong>Arredondado (<kbd>U</kbd>)</strong>, <strong>Círculo (<kbd>C</kbd>)</strong>, <strong>Seta (<kbd>A</kbd>)</strong>, <strong>Seta Dupla (<kbd>D</kbd>)</strong> ou <strong>Passos Numerados (<kbd>N</kbd>)</strong>.
+            </p>
+            <p>
+              Você pode personalizar a cor na <strong>paleta de 32 cores</strong> e a espessura do traço de <strong>1 a 16px</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Desfoque do Vidro -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <div class="guide-card-icon">🪟</div>
+            <h3 class="guide-card-title">Desfoque do Vidro (Glass)</h3>
+          </div>
+          <div class="guide-card-body">
+            <p>
+              Use a ferramenta <strong>Vidro (<kbd>G</kbd>)</strong> para ocultar informações confidenciais (senhas, CPF, nomes e valores sensíveis).
+            </p>
+            <p>
+              Escolha entre os níveis <strong>Leve</strong>, <strong>Suave</strong> (efeito de vidro translúcido com borda suave e sombra 3D), <strong>Médio</strong> ou <strong>Forte</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5: Navegação & Zoom Infinito -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <div class="guide-card-icon">🔍</div>
+            <h3 class="guide-card-title">Navegação & Zoom Infinito</h3>
+          </div>
+          <div class="guide-card-body">
+            <p>
+              Segure a tecla <strong>Espaço</strong> ou pressione o <strong>Botão Direito do Mouse</strong> para arrastar a tela livremente (Pan).
+            </p>
+            <p>
+              Use os controles no canto inferior direito para aplicar <strong>zoom de até 800%</strong> ou ajustar à tela.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6: Salvar e Exportar -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <div class="guide-card-icon">💾</div>
+            <h3 class="guide-card-title">Salvar e Exportar</h3>
+          </div>
+          <div class="guide-card-body">
+            <p>
+              Pressione <kbd>Ctrl + C</kbd> para copiar a imagem final com todas as anotações em alta resolução.
+            </p>
+            <p>
+              Use <kbd>Ctrl + S</kbd> para salvar o arquivo na pasta de sua preferência.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KEYBOARD SHORTCUTS CHEAT SHEET (TABELA COMPLETA)
+       ========================================================================== -->
+  <section class="section" id="atalhos" style="background: rgba(18, 20, 18, 0.6);">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge">Produtividade Instantânea</span>
+        <h2 class="section-title">Atalhos de Teclado Completos</h2>
+        <p class="section-subtitle">
+          Domine todas as ferramentas com uma tecla de distância.
+        </p>
+      </div>
+
+      <div class="shortcuts-grid">
+        
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Capturar Nova Área</h4>
+            <p>Disparo global configurável</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>F10</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Selecionar e Mover</h4>
+            <p>Mova e reposicione objetos</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>V</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Retângulo Vazado</h4>
+            <p>Enquadre áreas retangulares</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>R</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Retângulo Arredondado</h4>
+            <p>Cantos suaves com raio ajustável</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>U</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Círculo de Destaque</h4>
+            <p>Destaque ícones ou botões</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>C</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Seta Direcional Simples</h4>
+            <p>Apontamento preciso com ponta vetorial</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>A</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Seta Dupla</h4>
+            <p>Conecte dois pontos simultaneamente</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>D</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Passos Numerados (1-2-3)</h4>
+            <p>Geração sequencial auto-incremental</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>N</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Texto Livre</h4>
+            <p>Dois cliques para editar</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>T</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Desfoque do Vidro (Glass)</h4>
+            <p>Oculte dados sensíveis com vidro fosco</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>G</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Arrastar & Panorâmica</h4>
+            <p>Navegue livremente pela captura</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>Espaço</kbd>
+            <span class="kbd-plus">ou</span>
+            <kbd>Botão Direito</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Zoom Infinito (até 800%)</h4>
+            <p>Aumente ou ajuste à tela</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>Ctrl</kbd>
+            <span class="kbd-plus">+</span>
+            <kbd>Scroll</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Copiar Imagem com Anotações</h4>
+            <p>Copia direto para a área de transferência</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>Ctrl</kbd>
+            <span class="kbd-plus">+</span>
+            <kbd>C</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Salvar Arquivo</h4>
+            <p>Salva na pasta de sua preferência</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>Ctrl</kbd>
+            <span class="kbd-plus">+</span>
+            <kbd>S</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Desfazer Ação</h4>
+            <p>Histórico completo de alterações</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>Ctrl</kbd>
+            <span class="kbd-plus">+</span>
+            <kbd>Z</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Refazer Ação</h4>
+            <p>Restaura anotações desfeitas</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>Ctrl</kbd>
+            <span class="kbd-plus">+</span>
+            <kbd>Y</kbd>
+          </div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-info">
+            <h4>Cancelar / Fechar</h4>
+            <p>Cancela a captura atual sem salvar</p>
+          </div>
+          <div class="kbd-group">
+            <kbd>Esc</kbd>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DOWNLOAD & TECHNICAL SPECS SECTION
+       ========================================================================== -->
+  <section class="section" id="download">
+    <div class="container">
+      
+      <div class="download-box">
+        
+        <div class="download-left">
+          <span class="section-badge" style="margin-bottom: 12px;">Instalador Oficial</span>
+          <h2>Baixe o DeerPrint agora mesmo</h2>
+          <p>
+            Obtenha a versão estável mais recente para Windows. O instalador configura automaticamente o início silencioso em segundo plano e registra o atalho global <kbd>F10</kbd>.
+          </p>
+
+          <div class="download-action-wrap">
+            <a id="btn-download-full" href="#download" class="btn-download-full">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span class="btn-label">Baixar DeerPrint para Windows</span>
+            </a>
+            <span class="download-direct-note">
+              🔒 Download direto e seguro do instalador oficial para Windows.
+            </span>
+          </div>
+        </div>
+
+        <div class="download-right">
+          <div class="specs-card">
+            <div class="specs-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              Especificações Técnicas
+            </div>
+            <ul class="specs-list">
+              <li>
+                <span class="spec-name">Compatibilidade:</span>
+                <span class="spec-val">Windows 10 / 11 (64-bit)</span>
+              </li>
+              <li>
+                <span class="spec-name">Instalação:</span>
+                <span class="spec-val">Instalador Seguro (.exe)</span>
+              </li>
+              <li>
+                <span class="spec-name">Atualizações:</span>
+                <span class="spec-val">Automáticas e Silenciosas</span>
+              </li>
+              <li>
+                <span class="spec-name">Licença de Uso:</span>
+                <span class="spec-val">100% Gratuito (Open Source MIT)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PERGUNTAS FREQUENTES (FAQ)
+       ========================================================================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge">Dúvidas Frequentes</span>
+        <h2 class="section-title">Perguntas & Respostas</h2>
+        <p class="section-subtitle">
+          Tudo o que você precisa saber sobre o funcionamento e privacidade do DeerPrint.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O DeerPrint é gratuito?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim, 100% gratuito e de código aberto sob a licença MIT. Você pode usá-lo livremente tanto para fins pessoais quanto comerciais em sua empresa ou equipe.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Minhas capturas são salvas ou enviadas para algum servidor?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutamente não. O DeerPrint opera de forma 100% local no seu computador. Nenhuma imagem, texto digitado ou captura de tela é enviada para qualquer servidor externo. Seus dados permanecem estritamente sob seu controle.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Posso alterar a tecla de atalho padrão F10?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim! Ao abrir o painel de configurações do aplicativo no ícone da bandeja do sistema (System Tray), você pode configurar qualquer combinação de teclas desejada (ex: PrintScreen, Ctrl+Shift+S, F9, etc.).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Funciona bem com múltiplos monitores e resoluções 4K?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. O DeerPrint possui suporte nativo para multi-monitores com diferentes taxas de DPI e escalas do Windows, capturando áreas em ultra-alta definição sem distorções.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funcionam as atualizações automáticas?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              O aplicativo verifica periodicamente a existência de novas versões estáveis. Quando uma atualização é lançada, o download é feito silenciosamente em segundo plano e aplicado na próxima inicialização do app.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEEDBACK, SUGESTÕES, ELOGIOS & RECLAMAÇÕES
+       ========================================================================== -->
+  <section class="section" id="contato">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge">Fale Conosco</span>
+        <h2 class="section-title">Sugestões, Elogios & Reclamações</h2>
+        <p class="section-subtitle">
+          Sua opinião é fundamental para evoluirmos o DeerPrint. Envie sua mensagem, relate um problema ou sugira novos recursos.
+        </p>
+      </div>
+
+      <div class="feedback-card-centered">
+        <form id="feedback-form" class="feedback-form">
+          
+          <div class="form-row">
+            <div class="form-field">
+              <label for="feedback-name" class="form-label">Seu Nome</label>
+              <input type="text" id="feedback-name" name="name" class="form-input" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-field">
+              <label for="feedback-email" class="form-label">Seu E-mail</label>
+              <input type="email" id="feedback-email" name="email" class="form-input" placeholder="exemplo@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-type" class="form-label">Tipo de Mensagem</label>
+            <select id="feedback-type" name="type" class="form-select" required>
+              <option value="Sugestão de Melhoria">💡 Sugestão de Melhoria</option>
+              <option value="Elogio">✨ Elogio</option>
+              <option value="Reclamação">⚠️ Reclamação</option>
+              <option value="Relato de Problema / Bug">🐛 Relato de Problema / Bug</option>
+              <option value="Dúvida de Uso">❓ Dúvida sobre o Aplicativo</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-message" class="form-label">Sua Mensagem</label>
+            <textarea id="feedback-message" name="message" class="form-textarea" rows="5" placeholder="Escreva sua sugestão, elogio, dúvida ou reclamação detalhadamente..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="btn-submit-feedback" class="btn-submit-feedback">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <span class="btn-text">Enviar Mensagem</span>
+            </button>
+          </div>
+
+          <div id="feedback-status" class="feedback-status" style="display: none;"></div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h3>
+            <img src="deerprint-icon.png" alt="DeerPrint" width="28" height="28" style="border-radius: 6px; vertical-align: middle;">
+            <span>DeerPrint</span>
+          </h3>
+          <p>
+            A ferramenta de captura de tela mais rápida, prática e precisa para Windows.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#demonstracao">Ferramentas</a></li>
+            <li><a href="#instrucoes">Guia de Uso</a></li>
+            <li><a href="#atalhos">Atalhos de Teclado</a></li>
+            <li><a href="#download">Download Oficial</a></li>
+            <li><a href="#contato">Reclamações & Sugestões</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ecossistema</h4>
+          <ul class="footer-links">
+            <li><a href="https://fulviotanure.com.br" target="_blank" rel="noopener">Portfólio Fulvio Tanure</a></li>
+            <li><a href="/wmacro">wMacro App</a></li>
+            <li><a href="/rivi">RIVI Music</a></li>
+            <li><a href="/fotografia">Galeria Fotografia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suporte & Termos</h4>
+          <ul class="footer-links">
+            <li><a href="privacidade.html">Política de Privacidade</a></li>
+            <li><a href="termos.html">Termos de Uso</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+            <li><a href="#download">Baixar Atualizações</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          DeerPrint © 2026 • Criado e mantido por Fúlvio Tanure.
+        </div>
+        <div>
+          Software Livre e 100% Gratuito para Windows
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
