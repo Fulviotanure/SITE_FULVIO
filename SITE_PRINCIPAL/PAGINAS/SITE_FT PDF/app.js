@@ -7,8 +7,8 @@
   'use strict';
 
   const DOWNLOAD_URLS = {
-    normalExe: 'https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdf.exe',
-    liteExe: 'https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdfLite.exe'
+    normalExe: 'https://github.com/Fulviotanure/ft-pdf/releases/download/v2.0.0/FtPdf.exe',
+    liteExe: 'https://github.com/Fulviotanure/ft-pdf/releases/download/lite-v2.0.0/FtPdfLite.exe'
   };
 
   document.addEventListener('DOMContentLoaded', () => {
