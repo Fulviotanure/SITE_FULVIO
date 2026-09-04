@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script>
+    if (window.location.protocol !== 'file:' && (window.location.pathname.startsWith('/ftpdf') || window.location.pathname.startsWith('/ft-pdf') || window.location.pathname.startsWith('/pdf'))) {
+      document.write('<base href="/PAGINAS/SITE_FT%20PDF/">');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — FT PDF & FT PDF Lite</title>
+  <link rel="canonical" href="https://fulviotanure.com.br/ftpdf/privacidade.html">
+  <link rel="icon" type="image/png" href="logo.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .legal-wrapper {
+      max-width: 860px;
+      margin: 120px auto 80px;
+      background: var(--bg-surface-card);
+      border: var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 50px 44px;
+      box-shadow: var(--shadow-card);
+    }
+    .legal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: var(--border-subtle);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .legal-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .legal-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin: 32px 0 14px;
+      color: var(--brand-cyan-light);
+    }
+    .legal-body p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .legal-body ul {
+      color: var(--text-muted);
+      margin-left: 24px;
+      margin-bottom: 22px;
+      line-height: 1.7;
+    }
+    .legal-body strong {
+      color: var(--text-primary);
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--brand-cyan-light);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      transition: all var(--transition-fast);
+    }
+    .btn-back:hover {
+      background: var(--brand-primary);
+      color: #FFFFFF;
+      border-color: var(--brand-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Elementos de Luz Ambiente -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header Simples -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-link">
+        <div class="brand-logo-wrapper">
+          <img src="logo.png" alt="FT PDF Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">FT PDF</span>
+          <span class="brand-badge">Privacidade</span>
+        </div>
+      </a>
+      <a href="index.html" class="btn-back">← Voltar ao Início</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="legal-wrapper">
+      <div class="legal-header">
+        <div>
+          <h1 class="legal-title">Política de Privacidade</h1>
+          <p style="color: var(--text-subtle); font-size: 0.85rem; margin-top: 4px;">Última atualização: Setembro de 2026</p>
+        </div>
+        <a href="index.html" class="btn-back">← Início</a>
+      </div>
+
+      <div class="legal-body">
+        <p>
+          Esta Política de Privacidade descreve o compromisso inegociável do <strong>FT PDF</strong> e do <strong>FT PDF Lite</strong> (desenvolvidos por Fulvio Tanure) com a sua segurança, confidencialidade e soberania sobre seus dados digitais.
+        </p>
+
+        <h2>1. Princípio Fundamental: Arquitetura 100% Local (Offline-First)</h2>
+        <p>
+          O FT PDF foi concebido sob a filosofia de processamento exclusivamente local:
+        </p>
+        <ul>
+          <li><strong>Zero Envio para Nuvem:</strong> Nenhum arquivo PDF, formulário preenchido, assinatura desenhada, anotação ou texto inserido é enviado para servidores externos.</li>
+          <li><strong>Sem Servidores Intermediários:</strong> Todo o processamento de renderização vetorial, divisão de páginas, rotação e mesclagem ocorre estritamente na memória RAM e CPU/GPU do seu computador.</li>
+          <li><strong>Operação Offline Completa:</strong> O aplicativo funciona com todas as suas capacidades mesmo se o computador estiver completamente desconectado da internet.</li>
+        </ul>
+
+        <h2>2. Coleta e Tratamento de Dados Pessoais</h2>
+        <p>
+          <strong>Nenhum dado pessoal identificável é coletado, armazenado ou comercializado.</strong> Não solicitamos nome, e-mail, telefone, CPF, localização geográfica ou credenciais de qualquer espécie.
+        </p>
+
+        <h2>3. Conexões de Rede e Atualizador Automático</h2>
+        <p>
+          A única comunicação de rede realizada pelo software ocorre para verificação de novas versões estáveis:
+        </p>
+        <ul>
+          <li>O aplicativo consulta a API pública oficial do GitHub Releases (<code>api.github.com/repos/Fulviotanure/ft-pdf/releases</code>) para comparar o número da versão atual com o lançamento mais recente.</li>
+          <li>Nenhuma informação pessoal ou conteúdo de documentos é transmitido nessa requisição. Apenas a chamada HTTP padrão para verificação da tag de versão pública.</li>
+        </ul>
+
+        <h2>4. Armazenamento Local e Preferências</h2>
+        <p>
+          Configurações como preferências de zoom, cor da caneta, modelos de assinatura e lista de documentos recentes são salvas exclusivamente em arquivos locais de configuração no diretório do usuário do Windows (AppLocalData).
+        </p>
+
+        <h2>5. Código Aberto e Auditoria</h2>
+        <p>
+          O código-fonte do FT PDF é público e transparente, permitindo que desenvolvedores, pesquisadores de segurança e usuários inspecionem as chamadas de sistema e garantam a integridade do projeto em nosso repositório no GitHub:
+          <a href="https://github.com/Fulviotanure/ft-pdf" target="_blank" rel="noopener noreferrer" style="color: var(--brand-cyan-light);">https://github.com/Fulviotanure/ft-pdf</a>.
+        </p>
+
+        <h2>6. Contato</h2>
+        <p>
+          Em caso de dúvidas sobre este documento ou práticas de privacidade, entre em contato através do site oficial:
+          <a href="https://fulviotanure.com.br" target="_blank" rel="noopener noreferrer" style="color: var(--brand-cyan-light);">https://fulviotanure.com.br</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>© 2026 FT PDF Suite • Fulvio Tanure.</p>
+      <a href="termos.html" style="color: var(--text-muted);">Termos de Uso</a>
+    </div>
+  </footer>
+
+</body>
+</html>

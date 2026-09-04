@@ -65,6 +65,7 @@
                 fotografias: "Fotografias",
                 deerprint: "DeerPrint",
                 rivi: "RIVI (Streaming de Música)",
+                ftpdf: "FT PDF (Leitor de PDF)",
                 sobmedida: "Solicitar Sob Medida"
             },
             portfolio: {
@@ -196,6 +197,7 @@
                 fotografias: "Photographs",
                 deerprint: "DeerPrint",
                 rivi: "RIVI (Music Streaming)",
+                ftpdf: "FT PDF (PDF Reader)",
                 sobmedida: "Request Custom Site"
             },
             portfolio: {
@@ -327,6 +329,7 @@
                 fotografias: "Fotografie",
                 deerprint: "DeerPrint",
                 rivi: "RIVI (Streaming Musicale)",
+                ftpdf: "FT PDF (Lettore PDF)",
                 sobmedida: "Richiedi Su Misura"
             },
             portfolio: {

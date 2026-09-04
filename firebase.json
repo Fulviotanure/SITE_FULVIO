@@ -57,6 +57,26 @@
         "source": "/PAGINAS/SITE_DEERPRINT/index.html",
         "destination": "/deerprint",
         "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_FT%20PDF",
+        "destination": "/ftpdf",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_FT%20PDF/index.html",
+        "destination": "/ftpdf",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_FT PDF",
+        "destination": "/ftpdf",
+        "type": 301
+      },
+      {
+        "source": "/PAGINAS/SITE_FT PDF/index.html",
+        "destination": "/ftpdf",
+        "type": 301
       }
     ],
     "rewrites": [
@@ -147,6 +167,54 @@
       {
         "source": "/PAGINAS/SITE_DEERPRINT/**",
         "destination": "/PAGINAS/SITE_DEERPRINT/index.html"
+      },
+      {
+        "source": "/ftpdf/privacidade.html",
+        "destination": "/PAGINAS/SITE_FT PDF/privacidade.html"
+      },
+      {
+        "source": "/ftpdf/termos.html",
+        "destination": "/PAGINAS/SITE_FT PDF/termos.html"
+      },
+      {
+        "source": "/deerprint/privacidade.html",
+        "destination": "/PAGINAS/SITE_DEERPRINT/privacidade.html"
+      },
+      {
+        "source": "/deerprint/termos.html",
+        "destination": "/PAGINAS/SITE_DEERPRINT/termos.html"
+      },
+      {
+        "source": "/ftpdf",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
+      },
+      {
+        "source": "/ftpdf/**",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
+      },
+      {
+        "source": "/ft-pdf",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
+      },
+      {
+        "source": "/ft-pdf/**",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
+      },
+      {
+        "source": "/pdf",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
+      },
+      {
+        "source": "/pdf/**",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
+      },
+      {
+        "source": "/PAGINAS/SITE_FT PDF",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
+      },
+      {
+        "source": "/PAGINAS/SITE_FT PDF/**",
+        "destination": "/PAGINAS/SITE_FT PDF/index.html"
       }
     ],
     "headers": [
