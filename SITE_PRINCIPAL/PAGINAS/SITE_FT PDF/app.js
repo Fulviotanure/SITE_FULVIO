@@ -1,14 +1,16 @@
 /**
- * FT PDF - Script de Interatividade Sucinto
+ * FT PDF - Script de Interatividade e Integração com GitHub Releases
  * Foco: Leitor de PDF com Verificação de Integridade para Windows
+ * Padrão DeerPrint: Busca dinâmica das versões mais recentes via GitHub API
  */
 
 (function () {
   'use strict';
 
+  // URLs padrão / fallback seguro (nunca retornam 404)
   const DOWNLOAD_URLS = {
-    normalExe: 'https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdf.exe',
-    liteExe: 'https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdfLite.exe'
+    normalExe: 'https://github.com/Fulviotanure/ft-pdf/releases/download/v2.0.0/FtPdf.exe',
+    liteExe: 'https://github.com/Fulviotanure/ft-pdf/releases/download/lite-v2.0.0/FtPdfLite.exe'
   };
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +18,63 @@
     initMobileMenu();
     initDownloadModal();
     initScreenshotShowcase();
+    initReleaseData();
   });
+
+  /**
+   * Integração com GitHub Releases (Padrão DeerPrint)
+   * Busca assíncrona automática das versões mais recentes de FT PDF e FT PDF Lite
+   */
+  async function initReleaseData() {
+    const repo = 'Fulviotanure/ft-pdf';
+
+    try {
+      const response = await fetch(`https://api.github.com/repos/${repo}/releases`);
+      if (response.ok) {
+        const releases = await response.json();
+
+        // 1. Localiza a release mais recente que possui o executável do FT PDF Normal
+        for (const release of releases) {
+          if (release.assets && Array.isArray(release.assets)) {
+            const normalAsset = release.assets.find(a =>
+              a.name && a.name.toLowerCase() === 'ftpdf.exe'
+            );
+            if (normalAsset && normalAsset.browser_download_url) {
+              DOWNLOAD_URLS.normalExe = normalAsset.browser_download_url;
+              break;
+            }
+          }
+        }
+
+        // 2. Localiza a release mais recente que possui o executável do FT PDF Lite
+        for (const release of releases) {
+          if (release.assets && Array.isArray(release.assets)) {
+            const liteAsset = release.assets.find(a =>
+              a.name && a.name.toLowerCase() === 'ftpdflite.exe'
+            );
+            if (liteAsset && liteAsset.browser_download_url) {
+              DOWNLOAD_URLS.liteExe = liteAsset.browser_download_url;
+              break;
+            }
+          }
+        }
+
+        // 3. Atualiza os links diretos de todos os botões no HTML
+        const heroNormal = document.getElementById('btn-download-hero-normal');
+        if (heroNormal) heroNormal.href = DOWNLOAD_URLS.normalExe;
+
+        const heroLite = document.getElementById('btn-download-hero-lite');
+        if (heroLite) heroLite.href = DOWNLOAD_URLS.liteExe;
+
+        document.querySelectorAll('[data-download-trigger]').forEach(btn => {
+          const edition = btn.dataset.edition || 'normal';
+          btn.href = (edition === 'lite') ? DOWNLOAD_URLS.liteExe : DOWNLOAD_URLS.normalExe;
+        });
+      }
+    } catch (err) {
+      console.warn('GitHub Releases API indisponível temporariamente. Utilizando links padrão de fallback.', err);
+    }
+  }
 
   /**
    * Navbar: Detecção de scroll e ScrollSpy
