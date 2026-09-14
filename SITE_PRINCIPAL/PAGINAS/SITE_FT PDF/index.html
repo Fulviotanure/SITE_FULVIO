@@ -8,465 +8,95 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FT PDF - Leitor de PDF com Verificação de Integridade para Windows</title>
-
-  <!-- Canonical & Favicon -->
+  <title>FT PDF — Leitor de PDF com Verificação de Integridade Ultraleve</title>
   <link rel="canonical" href="https://fulviotanure.com.br/ftpdf">
   <link rel="icon" type="image/png" href="logo.png">
-
-  <!-- SEO & Open Graph Meta Tags -->
-  <meta name="description" content="FT PDF: Leitor de PDF moderno, ultrarrápido e com verificação avançada de integridade de documentos para Windows 10 e 11. 100% local, seguro e gratuito.">
+  <meta name="description" content="FT PDF: Leitor de PDF com verificação de integridade ultraleve para Windows 10 e 11. Motor vetorial nativo em C++, diagnóstico estrutural instantâneo e 100% offline.">
   <meta name="keywords" content="FT PDF, Leitor PDF Windows, Verificação de Integridade PDF, Diagnóstico PDF, Leitor PDF Rápido, Windows 11, Software Seguro">
   <meta name="author" content="Fulvio Tanure">
-
-  <!-- Open Graph / Facebook -->
+  
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fulviotanure.com.br/ftpdf">
-  <meta property="og:title" content="FT PDF - Leitor de PDF com Verificação de Integridade">
-  <meta property="og:description" content="Visualização vetorial rápida e verificação automática de integridade de documentos para Windows.">
-  <meta property="og:image" content="https://fulviotanure.com.br/PAGINAS/SITE_FT%20PDF/logo.png">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FT PDF - Leitor de PDF para Windows">
-  <meta name="twitter:description" content="Leitor de PDF moderno com diagnóstico e verificação de integridade de documentos.">
-  <meta name="twitter:image" content="https://fulviotanure.com.br/PAGINAS/SITE_FT%20PDF/logo.png">
-
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "FT PDF",
-    "operatingSystem": "Windows 10, Windows 11",
-    "applicationCategory": "UtilitiesApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "BRL"
-    },
-    "description": "Leitor de PDF com diagnóstico e verificação de integridade de arquivos para Windows.",
-    "author": {
-      "@type": "Person",
-      "name": "Fulvio Tanure",
-      "url": "https://fulviotanure.com.br"
-    }
-  }
-  </script>
-
-  <!-- Google Fonts -->
+  <meta property="og:title" content="FT PDF — Leitor de PDF com Verificação de Integridade Ultraleve">
+  <meta property="og:description" content="Leitor de PDF com verificação de integridade ultraleve para Windows. 100% local, seguro e gratuito.">
+  <meta property="og:image" content="logo.png">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- CSS Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Elementos de Luz Ambiente e Grid -->
-  <div class="ambient-glow glow-top-left"></div>
-  <div class="ambient-glow glow-top-right"></div>
-  <div class="ambient-glow glow-mid"></div>
-  <div class="grid-overlay"></div>
+  <!-- Background Animado (Orbs e Malha) -->
+  <div class="ambient-background">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="glass-overlay"></div>
+    <div class="grid-bg"></div>
+  </div>
 
-  <!-- ==========================================================================
-       HEADER / NAVBAR FLUTUANTE
-       ========================================================================== -->
-  <header class="navbar" id="main-navbar">
-    <div class="container navbar-container">
-      <a href="#hero" class="brand-link">
+  <header class="navbar animate-fade-down">
+    <div class="container nav-container">
+      <a href="./" class="nav-brand">
         <div class="brand-logo-wrapper">
-          <img src="logo.png" alt="FT PDF Logo" class="brand-logo-img">
+          <img src="logo.png" alt="FT PDF Logo" class="brand-logo">
         </div>
-        <span class="brand-title">FT PDF</span>
+        <span class="brand-name">FT PDF</span>
       </a>
-
-      <!-- Menu Principal Desktop -->
-      <ul class="nav-links">
-        <li><a href="#recursos" class="nav-link">Recursos</a></li>
-        <li><a href="#integridade" class="nav-link">Diagnóstico de Integridade</a></li>
-        <li><a href="#download" class="nav-link">Download</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <a href="#download" class="btn-nav-cta">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          <span>Baixar FT PDF</span>
-        </a>
-
-        <!-- Botão Menu Mobile -->
-        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Abrir Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Gaveta Mobile -->
-    <div class="mobile-menu-drawer" id="mobile-drawer">
-      <a href="#recursos" class="nav-link">Recursos</a>
-      <a href="#integridade" class="nav-link">Diagnóstico de Integridade</a>
-      <a href="#download" class="nav-link">Download</a>
-      <a href="#download" class="btn btn-primary" style="margin-top: 10px;">⬇️ Baixar FT PDF</a>
+      <nav class="nav-links">
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- ==========================================================================
-         HERO SECTION (APRESENTAÇÃO PRINCIPAL)
-         ========================================================================== -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-content">
-        
-        <!-- Badge Sucinto de Apresentação -->
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          <span>Leitor Nativo com Diagnóstico de Integridade para Windows</span>
-        </div>
+  <main class="hero-section">
+    <div class="container hero-container">
 
-        <!-- Título H1 Principal -->
-        <h1 class="hero-title">
-          Leitor de PDF veloz com <span class="gradient-text">verificação de integridade</span> de documentos.
-        </h1>
-
-        <!-- Subtítulo Focado e Sucinto -->
-        <p class="hero-subtitle">
-          Abra seus arquivos instantaneamente com renderização vetorial nítida e diagnostique a integridade estrutural de qualquer PDF antes de compartilhar, assinar ou arquivar.
-        </p>
-
-        <!-- Botões das Duas Opções de Download -->
-        <div class="hero-cta-group">
-          <a href="https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdf.exe" 
-             id="btn-download-hero-normal" 
-             class="btn btn-primary btn-large"
-             data-download-trigger
-             data-edition="normal">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            <span>Baixar FT PDF (Normal)</span>
-          </a>
-
-          <a href="https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdfLite.exe" 
-             id="btn-download-hero-lite" 
-             class="btn btn-secondary btn-lite btn-large"
-             data-download-trigger
-             data-edition="lite">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-            <span>Baixar FT PDF Lite <span class="gradient-text-emerald">(Ultraleve)</span></span>
-          </a>
-        </div>
-
-        <!-- Checklist de Confiança -->
-        <div class="hero-trust">
-          <span class="trust-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Windows 10 e 11 nativo
-          </span>
-          <span class="trust-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            100% Gratuito & Local
-          </span>
-          <span class="trust-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Validação de arquivos corrompidos
-          </span>
-        </div>
+      <div class="badge glass-panel animate-fade-up delay-1">
+        <div class="badge-glow"></div>
+        <span class="badge-dot"></span>
+        <span class="badge-text">100% Offline &amp; Seguro • Windows</span>
       </div>
 
-      <!-- Showcase Interativo com Prints Reais do Programa -->
-      <div class="container hero-mockup-wrapper">
-        <div class="mockup-glow"></div>
-        <div class="window-mockup">
-          
-          <!-- Barra de Título e Abas de Alternância dos Prints Reais -->
-          <div class="window-titlebar-showcase">
-            <div class="showcase-tabs">
-              <button class="showcase-tab active" data-screenshot="screenshot-ftpdf-normal.png">
-                <span class="tab-indicator-dot normal"></span>
-                <span>FT PDF (Normal) • Diagnóstico de Integridade</span>
-              </button>
-              <button class="showcase-tab" data-screenshot="screenshot-ftpdf-lite-reader.png">
-                <span class="tab-indicator-dot lite"></span>
-                <span>FT PDF Lite • Leitor Ultraleve</span>
-              </button>
-              <button class="showcase-tab" data-screenshot="screenshot-ftpdf-lite-welcome.png">
-                <span class="tab-indicator-dot lite"></span>
-                <span>FT PDF Lite • Tela Inicial</span>
-              </button>
-            </div>
-            
-            <div class="window-controls">
-              <span class="win-btn win-min"></span>
-              <span class="win-btn win-max"></span>
-              <span class="win-btn win-close"></span>
-            </div>
-          </div>
+      <h1 class="hero-title animate-fade-up delay-2">
+        Leitor de PDF com verificação<br>
+        de integridade <span class="text-highlight">ultraleve.</span>
+      </h1>
 
-          <!-- Container do Print Real em Alta Definição -->
-          <div class="real-screenshot-container">
-            <img id="main-showcase-img" 
-                 src="screenshot-ftpdf-normal.png" 
-                 alt="Print Real da Interface do FT PDF com Diagnóstico de Integridade" 
-                 class="real-screenshot-img">
+      <div class="cta-group animate-fade-up delay-3" id="download">
+        <a id="btn-download-main" href="https://github.com/Fulviotanure/FT-PDF/releases/latest/download/FtPdfLite.exe" class="btn-glass">
+          <div class="btn-bg"></div>
+          <div class="btn-content">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Baixar FT PDF Grátis</span>
           </div>
-
-          <!-- Barra de Informações do Print -->
-          <div class="window-statusbar">
-            <div class="statusbar-left">
-              <span><span class="status-dot-active"></span> Captura Real do Aplicativo Desktop no Windows</span>
-            </div>
-            <div class="statusbar-right">
-              <span id="showcase-caption">Interface oficial: Painel de Integridade de 100,0% e análise vetorial</span>
-            </div>
-          </div>
-
-        </div>
+        </a>
+        <p class="cta-subtext" id="btn-download-sub">Executável Direto • Portátil (64-bit)</p>
       </div>
-    </section>
 
-    <!-- ==========================================================================
-         SEÇÃO DE RECURSOS PRINCIPAIS (CONCISO E DIRETO AO PONTO)
-         ========================================================================== -->
-    <section class="section section-alt" id="recursos">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Simplicidade & Velocidade</span>
-          <h2 class="section-title">Apenas o que importa para leitura e validação</h2>
-          <p class="section-desc">
-            Sem menus inchados, sem travamentos e sem recursos desnecessários que deixam a experiência lenta.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          <!-- Card 1: Leitura Rápida -->
-          <div class="pillar-card">
-            <div class="pillar-icon-box">⚡</div>
-            <h3 class="pillar-title">Leitura Vetorial Instantânea</h3>
-            <p class="pillar-desc">
-              Abertura rápida de arquivos volumosos com renderização de alta nitidez para monitores Full HD, 2K e 4K.
-            </p>
-          </div>
-
-          <!-- Card 2: Verificação de Integridade -->
-          <div class="pillar-card">
-            <div class="pillar-icon-box">🛡️</div>
-            <h3 class="pillar-title">Verificação de Integridade</h3>
-            <p class="pillar-desc">
-              Analisa em tempo real se o arquivo PDF está íntegro, corrompido, danificado ou com tabelas de objetos ausentes.
-            </p>
-          </div>
-
-          <!-- Card 3: 100% Offline e Privado -->
-          <div class="pillar-card">
-            <div class="pillar-icon-box">🔒</div>
-            <h3 class="pillar-title">Privacidade Total e Local</h3>
-            <p class="pillar-desc">
-              Seus documentos são processados 100% na sua máquina. Nenhum arquivo é transferido para servidores externos.
-            </p>
-          </div>
-
-          <!-- Card 4: Sem Dependências -->
-          <div class="pillar-card">
-            <div class="pillar-icon-box">📦</div>
-            <h3 class="pillar-title">Pronto para Usar</h3>
-            <p class="pillar-desc">
-              Executável independente e autocontido. Não exige instalações complementares para funcionar no Windows.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SEÇÃO DE DESTAQUE: VERIFICAÇÃO DE INTEGRIDADE
-         ========================================================================== -->
-    <section class="section" id="integridade">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Diagnóstico de Precisão</span>
-          <h2 class="section-title">Como funciona a verificação de integridade?</h2>
-          <p class="section-desc">
-            Evite erros ao enviar documentos importantes ou contratos com arquivos silenciosamente corrompidos.
-          </p>
-        </div>
-
-        <div class="integrity-steps-grid">
-          <div class="integrity-step-card">
-            <div class="step-badge">Etapa 1</div>
-            <h3 class="step-title">Leitura da Estrutura Binária</h3>
-            <p class="step-desc">
-              Checagem do cabeçalho de versão, marcador EOF (End-of-File) e integridade dos bytes do arquivo.
-            </p>
-          </div>
-
-          <div class="integrity-step-card">
-            <div class="step-badge">Etapa 2</div>
-            <h3 class="step-title">Validação da Tabela XREF</h3>
-            <p class="step-desc">
-              Auditoria dos ponteiros de cada página, imagem e elemento de texto para garantir que nada esteja corrompido.
-            </p>
-          </div>
-
-          <div class="integrity-step-card">
-            <div class="step-badge">Etapa 3</div>
-            <h3 class="step-title">Relatório Imediato</h3>
-            <p class="step-desc">
-              Confirmação visual instantânea de integridade na barra do aplicativo com indicação clara do estado do documento.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SEÇÃO DE DOWNLOAD DIRETO (DUAS OPÇÕES: NORMAL E LITE)
-         ========================================================================== -->
-    <section class="section section-alt" id="download">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Download para Windows</span>
-          <h2 class="section-title">Escolha a opção ideal para você</h2>
-          <p class="section-desc">
-            Duas alternativas gratuitas e 100% locais para leitura e verificação de integridade no Windows.
-          </p>
-        </div>
-
-        <div class="download-cards-grid">
-          
-          <!-- Opção 1: FT PDF Normal -->
-          <div class="download-card normal-edition">
-            <div class="card-badge-row">
-              <span class="edition-badge normal">Padrão</span>
-              <span class="system-tag">Windows 10 / 11</span>
-            </div>
-            
-            <div class="card-screenshot-preview">
-              <img src="screenshot-ftpdf-normal.png" alt="Prévia da interface do FT PDF Normal com painel de integridade" class="card-thumb-img">
-            </div>
-
-            <h3 class="edition-title">FT PDF (Normal)</h3>
-            <p class="edition-desc">
-              Leitor vetorial completo com diagnóstico detalhado de integridade de documentos, navegação fluida e renderização de alta precisão.
-            </p>
-            <div class="card-download-actions">
-              <a href="https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdf.exe" 
-                 class="btn btn-primary" 
-                 data-download-trigger 
-                 data-edition="normal">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Baixar FT PDF Normal (.exe)</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Opção 2: FT PDF Lite -->
-          <div class="download-card lite-edition">
-            <div class="card-badge-row">
-              <span class="edition-badge lite">Ultraleve</span>
-              <span class="system-tag">Windows 10 / 11</span>
-            </div>
-
-            <div class="card-screenshot-preview">
-              <img src="screenshot-ftpdf-lite-reader.png" alt="Prévia da interface ultraleve do FT PDF Lite" class="card-thumb-img">
-            </div>
-
-            <h3 class="edition-title">FT PDF Lite</h3>
-            <p class="edition-desc">
-              Edição ultraleve desenvolvida para inicialização instantânea, baixíssimo consumo de memória e verificação ágil de integridade.
-            </p>
-            <div class="card-download-actions">
-              <a href="https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdfLite.exe" 
-                 class="btn btn-secondary btn-lite-action" 
-                 data-download-trigger 
-                 data-edition="lite">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                <span>Baixar FT PDF Lite (.exe)</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <p style="text-align: center; font-size: 0.85rem; color: var(--text-subtle); margin-top: 36px;">
-          ✓ Compatível com Windows 10 e Windows 11 (64-bit) • 100% Gratuito e Local
-        </p>
-      </div>
-    </section>
+    </div>
   </main>
 
-  <!-- ==========================================================================
-       MODAL DE CONFIRMAÇÃO DE DOWNLOAD
-       ========================================================================== -->
-  <div class="modal-overlay" id="download-modal" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar Modal">✕</button>
-      
-      <div class="modal-icon-circle">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+  <footer class="footer animate-fade-up delay-4">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <img src="logo.png" alt="FT PDF Logo" class="footer-logo">
+        <p>FT PDF Suite © 2026. Desenvolvido para máxima eficiência.</p>
       </div>
-
-      <h3 class="modal-title">Iniciando download do FT PDF!</h3>
-      <p class="modal-desc">
-        O download do executável para Windows iniciará automaticamente.
-      </p>
-
-      <div class="modal-steps">
-        <div class="modal-step-item">
-          <span class="step-num">1</span>
-          <span>Aguarde o término do download no seu navegador.</span>
-        </div>
-        <div class="modal-step-item">
-          <span class="step-num">2</span>
-          <span>Abra a pasta de downloads e execute o arquivo.</span>
-        </div>
-        <div class="modal-step-item">
-          <span class="step-num">3</span>
-          <span>Pronto! O FT PDF abrirá imediatamente na sua máquina.</span>
-        </div>
-      </div>
-
-      <p style="font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 18px;">
-        Caso não inicie automaticamente, <a href="https://github.com/Fulviotanure/ft-pdf/releases/latest/download/FtPdf.exe" id="modal-direct-link" style="color: var(--brand-cyan-mid); text-decoration: underline;">clique aqui para forçar o download direto</a>.
-      </p>
-
-      <button class="btn btn-secondary" onclick="document.getElementById('download-modal').classList.remove('active'); document.body.style.overflow='';" style="width: 100%;">
-        Fechar
-      </button>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       RODAPÉ (FOOTER)
-       ========================================================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top-simple">
-        
-        <div class="footer-brand-header">
-          <img src="logo.png" alt="FT PDF Logo" class="footer-logo">
-          <span class="footer-brand-name">FT PDF</span>
-        </div>
-
-        <div class="footer-nav-simple">
-          <a href="#recursos" class="footer-link">Recursos</a>
-          <a href="#integridade" class="footer-link">Diagnóstico de Integridade</a>
-          <a href="#download" class="footer-link">Download</a>
-          <a href="privacidade.html" class="footer-link">Privacidade</a>
-          <a href="termos.html" class="footer-link">Termos</a>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 FT PDF • Leitor de PDF e Verificação de Integridade para Windows.</p>
-        <p class="footer-credits">
-          Desenvolvido por <a href="https://fulviotanure.com.br" target="_blank" rel="noopener noreferrer">Fulvio Tanure</a>.
-        </p>
+      <div class="footer-links">
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="app.js"></script>
 </body>
 </html>
