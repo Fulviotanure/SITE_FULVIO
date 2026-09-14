@@ -47,13 +47,13 @@ async function fetchLatestDownloadLink() {
     const releases = await response.json();
     if (!Array.isArray(releases) || releases.length === 0) return;
 
-    // Localiza o executável oficial mais recente (FtPdfLite.exe ou FtPdf.exe)
+    // Localiza o executável oficial mais recente da versão Lite (FtPdfLite.exe)
     let targetDownloadUrl = null;
 
     for (const release of releases) {
       if (release.assets && Array.isArray(release.assets)) {
         const asset = release.assets.find(a => 
-          a.name && (a.name.toLowerCase() === 'ftpdflite.exe' || a.name.toLowerCase() === 'ftpdf.exe')
+          a.name && a.name.toLowerCase() === 'ftpdflite.exe'
         );
         if (asset && asset.browser_download_url) {
           targetDownloadUrl = asset.browser_download_url;
