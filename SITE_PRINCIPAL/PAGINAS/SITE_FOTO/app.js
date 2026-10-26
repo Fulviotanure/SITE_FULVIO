@@ -144,9 +144,6 @@ function scrollToPortfolio() {
 
 // --- Mobile Navigation Drawer Menu ---
 function setupMenuToggle() {
-  const dropdownToggle = document.getElementById("portfolioDropdownToggle");
-  const hasDropdown = document.querySelector(".has-dropdown");
-
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
       menuToggle.classList.toggle("open");
@@ -154,21 +151,9 @@ function setupMenuToggle() {
     });
   }
 
-  // Mobile accordion toggle for "Portfólio"
-  if (dropdownToggle && hasDropdown) {
-    dropdownToggle.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        hasDropdown.classList.toggle("dropdown-open");
-        const isOpen = hasDropdown.classList.contains("dropdown-open");
-        dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      }
-    });
-  }
-
-  // Close drawer when clicking any actionable navigation link (subpages or contacts)
-  const actionableLinks = navMenu.querySelectorAll(".dropdown-link, #navMenu > li > a:not(.dropdown-toggle)");
-  actionableLinks.forEach(link => {
+  // Close drawer when clicking any navigation link
+  const mobileLinks = navMenu ? navMenu.querySelectorAll("a") : [];
+  mobileLinks.forEach(link => {
     link.addEventListener("click", () => {
       if (menuToggle && navMenu) {
         menuToggle.classList.remove("open");
