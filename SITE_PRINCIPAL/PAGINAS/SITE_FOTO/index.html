@@ -70,9 +70,9 @@
       <!-- Navegação Principal -->
       <nav>
         <ul class="nav-menu" id="navMenu">
-          <li class="has-dropdown">
-            <a href="#portfolio" class="nav-link active">Portfólio <span class="dropdown-icon">▼</span></a>
-            <ul class="dropdown-menu">
+          <li class="has-dropdown dropdown-open">
+            <a href="#portfolio" class="nav-link active dropdown-toggle" id="portfolioDropdownToggle" role="button" aria-haspopup="true" aria-expanded="true">Portfólio <span class="dropdown-icon">▼</span></a>
+            <ul class="dropdown-menu" id="portfolioDropdownMenu">
               <li><a href="#todos" class="dropdown-link filter-btn" data-filter="todos">Galeria</a></li>
               <li><a href="#retratos" class="dropdown-link filter-btn" data-filter="retratos">Retratos</a></li>
               <li><a href="#cenas" class="dropdown-link filter-btn" data-filter="cenas">Cenas</a></li>
@@ -97,6 +97,15 @@
     <div class="container">
       <h2 id="portfolioTitle" class="section-title reveal reveal-up">GALERIA</h2>
 
+      <!-- Menu de Filtros de Categoria (Pills Táteis) -->
+      <div class="filter-wrapper reveal reveal-fade">
+        <div class="filter-menu" role="tablist" aria-label="Categorias da Galeria">
+          <button type="button" class="filter-btn active" data-filter="todos" role="tab" aria-selected="true">Galeria</button>
+          <button type="button" class="filter-btn" data-filter="retratos" role="tab" aria-selected="false">Retratos</button>
+          <button type="button" class="filter-btn" data-filter="cenas" role="tab" aria-selected="false">Cenas</button>
+          <button type="button" class="filter-btn" data-filter="ensaios" role="tab" aria-selected="false">Ensaios</button>
+        </div>
+      </div>
 
       <!-- Container para Botão Voltar do Ensaio -->
       <div id="backButtonContainer" class="back-button-container" style="display: none;"></div>

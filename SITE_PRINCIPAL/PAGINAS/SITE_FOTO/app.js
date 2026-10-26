@@ -128,33 +128,83 @@ function setupHeaderScroll() {
   handleScroll();
 }
 
+// --- Helper: Smooth Scroll to Portfolio Top ---
+function scrollToPortfolio() {
+  const portfolioEl = document.getElementById("portfolio");
+  if (portfolioEl) {
+    const headerOffset = 70;
+    const elementPosition = portfolioEl.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
+}
+
 // --- Mobile Navigation Drawer Menu ---
 function setupMenuToggle() {
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("open");
-    navMenu.classList.toggle("open");
-  });
+  const dropdownToggle = document.getElementById("portfolioDropdownToggle");
+  const hasDropdown = document.querySelector(".has-dropdown");
 
-  const mobileLinks = navMenu.querySelectorAll("a");
-  mobileLinks.forEach(link => {
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("open");
+      navMenu.classList.toggle("open");
+    });
+  }
+
+  // Mobile accordion toggle for "Portfólio"
+  if (dropdownToggle && hasDropdown) {
+    dropdownToggle.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        hasDropdown.classList.toggle("dropdown-open");
+        const isOpen = hasDropdown.classList.contains("dropdown-open");
+        dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+    });
+  }
+
+  // Close drawer when clicking any actionable navigation link (subpages or contacts)
+  const actionableLinks = navMenu.querySelectorAll(".dropdown-link, #navMenu > li > a:not(.dropdown-toggle)");
+  actionableLinks.forEach(link => {
     link.addEventListener("click", () => {
-      menuToggle.classList.remove("open");
-      navMenu.classList.remove("open");
+      if (menuToggle && navMenu) {
+        menuToggle.classList.remove("open");
+        navMenu.classList.remove("open");
+      }
     });
   });
 }
 
 // --- Portfolio Filter & Category selection ---
 function setupFilterButtons() {
-  // Links update the hash natively via href.
+  const allFilterTriggers = document.querySelectorAll("[data-filter]");
+  allFilterTriggers.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const filter = btn.getAttribute("data-filter");
+      if (filter) {
+        if (window.location.hash !== `#${filter}`) {
+          window.location.hash = filter;
+        } else {
+          // If already on this hash, re-apply and scroll
+          updateFilterButtonsActiveState(filter);
+          applyCategoryFilter(filter);
+        }
+        scrollToPortfolio();
+      }
+    });
+  });
 }
 
 function updateFilterButtonsActiveState(activeFilter) {
-  filterButtons.forEach(btn => {
-    if (btn.getAttribute("data-filter") === activeFilter) {
-      btn.classList.add("active");
-    } else {
-      btn.classList.remove("active");
+  const allFilters = document.querySelectorAll("[data-filter]");
+  allFilters.forEach(btn => {
+    const isMatch = btn.getAttribute("data-filter") === activeFilter;
+    btn.classList.toggle("active", isMatch);
+    if (btn.tagName === "BUTTON") {
+      btn.setAttribute("aria-selected", isMatch ? "true" : "false");
     }
   });
 }
@@ -316,6 +366,14 @@ function openPhotoshoot(category) {
         &larr; Voltar para Ensaios
       </a>
     `;
+    const backBtn = backButtonContainer.querySelector(".btn-back");
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        setTimeout(() => {
+          scrollToPortfolio();
+        }, 50);
+      });
+    }
     // Ensure back button transitions nicely
     backButtonContainer.classList.add("reveal", "reveal-fade");
     revealObserver.observe(backButtonContainer);
@@ -326,6 +384,7 @@ function openPhotoshoot(category) {
   initMasonryColumns();
   spinner.style.display = "flex";
   loadAllPhotos();
+  scrollToPortfolio();
 }
 
 function loadAllPhotos() {
